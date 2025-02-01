@@ -1,0 +1,436 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  background: hsl(240, 78%, 98%);
+  width: 100vw;
+  background-image: url(images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: left 179px top -30px;
+}
+
+.all-data-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  color: hsl(233, 13%, 49%);
+}
+
+.annually-monthly-plan {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-evenly;
+  color: hsl(234, 14%, 74%);
+  margin-bottom: 60px;
+}
+
+.plan-detail {
+  font-size: 20px;
+}
+
+.price-wise-data-plan {
+  display: flex;
+  flex-direction: column;
+}
+
+.data-basic-master {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 44px;
+  margin-bottom: 40px;
+}
+
+.price-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(232, 13%, 33%);
+}
+
+.dollar-sign {
+  font-size: 35px;
+  margin-right: -8px;
+}
+
+.data-basic-master h1 {
+  font-size: 50px;
+  margin: 12px;
+}
+
+.data-basic-master p {
+  font-size: 20px;
+  color: hsl(233, 13%, 49%);
+}
+
+.plan-list {
+  margin: 15px 0;
+  border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+.plan-list > li {
+  padding: 16px 0;
+  font-size: 16px;
+  color: hsl(233, 13%, 49%);
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+button {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px 55px;
+  border-radius: 7px;
+  color: white;
+  border: 1px solid hsl(235, 18%, 72%);
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  font-size: 14px;
+  font-weight: bold;
+}
+
+button:hover {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0s;
+  transform: scale(1.2);
+  color: white;
+}
+
+.data-professional {
+  background: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 40px;
+}
+.data-professional > .price-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.dollar-sign-professional {
+  font-size: 35px;
+  margin-right: -8px;
+}
+
+.data-professional h1 {
+  font-size: 50px;
+  margin: 12px;
+}
+
+.data-professional h1 > span {
+  font-size: 40px;
+  padding: 5px;
+}
+
+.data-professional p {
+  font-size: 20px;
+  color: white;
+}
+
+.plan-list-professional {
+  margin: 15px 0;
+  border-top: 1px solid hsl(234, 14%, 74%);
+}
+
+.plan-list-professional > li {
+  padding: 16px 0;
+  font-size: 16px;
+  color: white;
+  border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.btn-professional {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 10px 55px;
+  border-radius: 5px;
+  color: hsl(237, 63%, 64%);
+  border: 1px solid hsl(235, 18%, 72%);
+  background: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-professional:hover {
+  background: white;
+  transition-delay: 0.2s;
+  -webkit-transition-delay: 0s;
+  transform: scale(1.2);
+  color: hsl(237, 63%, 64%);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.toggle-label {
+  display: block;
+  width: 55px;
+  height: 30px;
+  background: hsl(237, 63%, 64%);
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggle-label::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle-label {
+  background: hsl(237, 63%, 64%);
+}
+
+input[type="checkbox"]:checked + .toggle-label::after {
+  left: 27px;
+}
+
+/* Media Query for tablets (min-width: 600px) */
+@media (min-width: 600px) {
+  body {
+    width: auto;
+    height: auto;
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right -30% top -5%, bottom left;
+  }
+
+  .annually-monthly-plan {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    color: hsl(234, 14%, 74%);
+    margin-bottom: 60px;
+  }
+
+  .price-wise-data-plan {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data-basic-master {
+    width: 50vw;
+  }
+
+  .dollar-sign {
+    font-size: 40px;
+    margin-right: -6px;
+  }
+
+  .data-basic-master h1 {
+    font-size: 50px;
+    margin: 10px;
+  }
+
+  .data-basic-master p {
+    font-size: 20px;
+  }
+
+  .plan-list > li {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 50px;
+    font-size: 18px;
+  }
+
+  .data-professional {
+    width: 50vw;
+  }
+
+  .dollar-sign-professional {
+    font-size: 45px;
+    margin-right: -12px;
+  }
+
+  .data-professional h1 {
+    font-size: 60px;
+    margin: 15px;
+  }
+
+  .data-professional p {
+    font-size: 20px;
+  }
+
+  .plan-list-professional > li {
+    padding: 20px 0;
+    font-size: 16px;
+  }
+
+  .btn-professional {
+    margin-top: 15px;
+    padding: 10px 60px;
+    font-size: 20px;
+  }
+}
+
+/* Media Query for desktops (min-width: 1024px) */
+@media (min-width: 1024px) {
+  body {
+    background-position: right -50px top -10px, bottom -80px left;
+  }
+
+  .all-data-plan {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .annually-monthly-plan {
+    width: 30%;
+  }
+
+  .price-wise-data-plan {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .data-basic-master {
+    width: 25vw;
+  }
+
+  .dollar-sign {
+    font-size: 30px;
+    margin-right: -6px;
+  }
+
+  .data-basic-master h1 {
+    font-size: 40px;
+    margin: 10px;
+  }
+
+  .plan-list > li {
+    padding: 15px 0;
+    font-size: 15px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .data-professional {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 25vw;
+  }
+
+  .dollar-sign-professional {
+    font-size: 40px;
+    margin-right: -12px;
+  }
+  .data-professional h1 {
+    font-size: 50px;
+    margin: 15px;
+  }
+
+  .data-professional p {
+    font-size: 20px;
+  }
+
+  .plan-list-professional > li {
+    padding: 15px 0;
+    font-size: 15px;
+  }
+
+  .btn-professional {
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 15px;
+  }
+}
+
+/* Media Query for desktops (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .dollar-sign {
+    font-size: 45px;
+    margin-right: -14px;
+  }
+
+  .data-basic-master h1 {
+    font-size: 70px;
+    margin: 20px;
+  }
+
+  .data-basic-master p {
+    font-size: 24px;
+  }
+
+  .plan-list > li {
+    padding: 25px 0;
+    font-size: 18px;
+  }
+
+  button {
+    padding: 10px 50px;
+    font-size: 18px;
+  }
+
+  .data-professional {
+    width: 24vw;
+  }
+
+  .dollar-sign-professional {
+    font-size: 45px;
+    margin-right: -14px;
+  }
+
+  .data-professional h1 {
+    font-size: 70px;
+    margin: 20px;
+  }
+
+  .data-professional p {
+    font-size: 24px;
+  }
+
+  .plan-list-professional > li {
+    padding: 25px 0;
+    font-size: 18px;
+  }
+
+  .btn-professional {
+    margin-top: 30px;
+    padding: 10px 60px;
+    font-size: 20px;
+  }
+}
