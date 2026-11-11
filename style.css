@@ -17,12 +17,7 @@ body {
     font-family: "Montserrat", sans-serif;
     font-size: 15px;
     font-weight: 700;
-    background-color: var(--very-light-grayish-blue);
-    background-image: url('./images/bg-top.svg');
-    background-repeat: no-repeat, no-repeat;
-    background-position: right -230px top -80px, right -230px bottom;
-
-    background-size: 100% auto, 100% auto;
+    background: url("./images/bg-top.svg") no-repeat top -35px right -180px, var(--very-light-grayish-blue);
 }
 
 h1 {
