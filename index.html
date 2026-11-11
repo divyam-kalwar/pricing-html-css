@@ -12,6 +12,12 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
     <title>Pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,10 +32,102 @@
     </style>
   </head>
   <body>
-    Our Pricing Annually Monthly Basic &dollar;19.99 &dollar;199.99 500 GB
-    Storage 2 Users Allowed Send up to 3 GB Learn More Professional
-    &dollar;24.99 &dollar;249.99 1 TB Storage 5 Users Allowed Send up to 10 GB
-    Learn More Master &dollar;39.99 &dollar;399.99 2 TB Storage 10 Users Allowed
-    Send up to 20 GB Learn More
+    <div class="header-content">
+      <h1>Our Pricing</h1>
+    
+      <div class="billing-type">
+        <span>Annually</span>
+
+        <input type="checkbox" id="billing-toggle">
+
+        <span>Monthly</span>
+
+        <label for="billing-toggle" class="hidden">
+          Switch billing period
+        </label>
+      </div>
+    </div>
+    
+    <div class="pricing-plans">
+      <section class="basic-pricing">
+        <h2>Basic</h2>
+
+        <div class="price-container">
+          <div class="monthly-price">
+            <p>
+              <span class="currency">&dollar;</span>19.99
+            </p>
+          </div>
+  
+          <div class="annual-price">
+            <p>
+              <span class="currency">&dollar;</span>199.99
+            </p>
+          </div>
+        </div>
+
+        <ul>
+          <li>500 GB Storage</li>
+          <li>2 Users Allowed</li>
+          <li>Send upto 3 GB</li>
+        </ul>
+
+        <button>Learn More</button>
+      </section>
+  
+      <section class="professional-pricing">
+        <h2>Professional</h2>
+        <div class="price-container">
+          <div class="monthly-price">
+            <p>
+              <span class="currency">&dollar;</span>24.99
+            </p>
+          </div>
+  
+          <div class="annual-price">
+            <p>
+              <span class="currency">&dollar;</span>249.99
+            </p>
+          </div>
+        </div>
+        
+
+        <ul>
+          <li>1 TB Storage</li>
+          <li>5 Users Allowed</li>
+          <li>Send up to 10 GB</li>
+        </ul>
+
+        <button>Learn More</button>
+      </section>
+  
+      <section class="master-pricing">
+        <h2>Master</h2>
+
+        <div class="price-container">
+          <div class="monthly-price">
+            <p>
+              <span class="currency">&dollar;</span>39.99
+            </p>
+          </div> 
+          
+          <div class="annual-price">
+            <p>
+              <span class="currency">&dollar;</span>399.99
+            </p>
+          </div>
+        </div>
+
+        <ul>
+          <li>2 TB Storage</li>
+          <li>10 Users Allowed</li>
+          <li>Send up to 20 GB</li>
+        </ul>
+
+        <button>Learn More</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
